@@ -33,7 +33,7 @@ http://localhost
 
 it will print the listing of application run directory e.g. C:\Users\User\Projects\webserver.
 
-I prepared test directory [public/](public/) which contains index.html. You can change into this directory before running the server to test how the webserver responds with html content by clicking index.html link when directory listing is loaded.
+I prepared test directory [public/](public/) which contains [index.html](public/index.html). You can change into this directory before running the server to test how the webserver responds with html content by clicking index.html link when directory listing is loaded.
 
 
 ## Design decision
