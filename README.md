@@ -18,7 +18,7 @@ Run the Java jar file
 ```bash
 java -jar build\libs\webserver-1.0-SNAPSHOT.jar
 ```
-You will see startup lines
+And the server load prints
 
 ```bash
 Starting app on directory: C:\Users\User\Projects\webserver
@@ -43,7 +43,7 @@ JDK/JRE: [Adopt OpenJDK v11 (OpenJ9)](https://adoptopenjdk.net/?variant=openjdk1
 Due to limitation of using only standard Java SE 8:
 1. Use combination of ServerSocket and BufferedReader to process incoming request to port 80.
 2. Use combination of BufferedWriter and StringBuilder to generate response.
-3. Build own HTTPStatus class using Map, currently only 200, 404 and 500 HTTP status included.
+3. Build own HTTPStatus class using Map, currently only HTTP status 200, 404 and 500 included.
 
 
 ## Future improvements
