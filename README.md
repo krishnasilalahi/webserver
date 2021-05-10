@@ -1,5 +1,6 @@
 # WebServer
 
+
 ## Installation
 
 Run gradle build
@@ -7,8 +8,8 @@ Run gradle build
 ```bash
 .\gradlew.bat clean build
 ```
-
 This will generate jar file under build\libs directory
+
 
 ## Usage
 
@@ -24,7 +25,7 @@ Starting app on directory: C:\Users\User\Projects\webserver
 Starts web server on port: 80
 ```
 
-Open web browser
+Open web browser and load localhost
 
 ```bash
 http://localhost
@@ -34,7 +35,18 @@ it will print the listing of application run directory e.g. C:\Users\User\Projec
 
 I prepared test directory public/ which contains index.html. You can change into this directory before running the server to how the webserver response html content.
 
-## Known issue
 
-1. No configuration for port, serving directory
-2. Missing tests
+## Design decision
+
+Due to limitation of using only standard Java SE 8:
+1. Use combination of ServerSocket and BufferedReader to process incoming request to port 80.
+2. Use combination of BufferedWriter and StringBuilder to generate response.
+3. Build own HTTPStatus class using Map, currently only 200, 404 and 500 HTTP status included.
+
+
+## Future improvements
+
+1. Add configuration for port, serving directory.
+2. Complete HTTP error status.
+3. Add unit tests.
+4. Use Threading and Non blocking IO.
